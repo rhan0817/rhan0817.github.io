@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>壽司郎 × BMW｜壽司車聯名系列</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="回到壽司郎 BMW 聯名首頁">
+        <span class="sushiro-logo">スシロー</span>
+        <span class="brand-cross">×</span>
+        <span class="bmw-logo" aria-hidden="true">
+          <span>BMW</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="開啟選單" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="主要導覽" data-nav-menu>
+        <a href="#intro">聯名介紹</a>
+        <a href="#collection">壽司車款</a>
+        <a href="#products">限量周邊</a>
+        <a href="#rules">活動辦法</a>
+        <a href="#stores">門市資訊</a>
+      </nav>
+
+      <button class="reserve-button" type="button" data-open-modal="booking">立即訂位</button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">壽司郎 × BMW</p>
+          <h1 id="hero-title">壽司車聯名系列</h1>
+          <p class="hero-kicker">回轉壽司・極致駕馭</p>
+          <p class="hero-text">
+            壽司在轉，樂趣不斷；駕馭在手，快感無限。享受壽司，享受駕馭，享受生活每一刻！
+          </p>
+          <div class="hero-actions">
+            <a class="primary-cta" href="#collection">
+              探索聯名系列
+              <span aria-hidden="true">›</span>
+            </a>
+            <button class="ghost-cta" type="button" data-open-modal="gallery">查看原始視覺</button>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="壽司造型 BMW 車款主視覺">
+          <img src="assets/hero-cars.jpg" alt="鮭魚、鮪魚、花枝與玉子燒壽司造型 BMW 車款在迴轉台上" />
+        </div>
+      </section>
+
+      <section class="model-rail" id="collection" aria-labelledby="collection-title">
+        <div class="rail-heading">
+          <div>
+            <p class="section-label">Series</p>
+            <h2 id="collection-title">壽司車款介紹</h2>
+          </div>
+          <button class="text-link" type="button" data-show-all>查看全部車款 <span aria-hidden="true">›</span></button>
+        </div>
+
+        <div class="model-grid" role="tablist" aria-label="壽司車款">
+          <button class="model-card is-active" type="button" role="tab" aria-selected="true" data-model="salmon">
+            <span class="model-name">鮭魚壽司車</span>
+            <strong>THE 3</strong>
+            <img src="assets/card-salmon.jpg" alt="鮭魚壽司車 THE 3" />
+          </button>
+          <button class="model-card" type="button" role="tab" aria-selected="false" data-model="tuna">
+            <span class="model-name">鮪魚壽司車</span>
+            <strong>THE 5</strong>
+            <img src="assets/card-tuna.jpg" alt="鮪魚壽司車 THE 5" />
+          </button>
+          <button class="model-card" type="button" role="tab" aria-selected="false" data-model="flounder">
+            <span class="model-name">花枝壽司車</span>
+            <strong>X5</strong>
+            <img src="assets/card-flounder.jpg" alt="花枝壽司車 X5" />
+          </button>
+          <button class="model-card" type="button" role="tab" aria-selected="false" data-model="tamago">
+            <span class="model-name">玉子燒壽司車</span>
+            <strong>X7</strong>
+            <img src="assets/card-tamago.jpg" alt="玉子燒壽司車 X7" />
+          </button>
+        </div>
+      </section>
+
+      <section class="detail-panel" aria-live="polite">
+        <div class="detail-image">
+          <img id="detail-image" src="assets/card-salmon.jpg" alt="鮭魚壽司車 THE 3" />
+        </div>
+        <div class="detail-copy">
+          <p class="section-label" id="detail-category">Sushi Drive 01</p>
+          <h2 id="detail-title">鮭魚壽司車 THE 3</h2>
+          <p id="detail-description">
+            以鮭魚的油脂光澤搭配 THE 3 的俐落車身比例，主打靈活入彎與日常通勤的俐落節奏。
+          </p>
+          <dl class="spec-list">
+            <div>
+              <dt>風味</dt>
+              <dd id="detail-flavor">濃郁鮭魚</dd>
+            </div>
+            <div>
+              <dt>駕馭感</dt>
+              <dd id="detail-drive">輕快精準</dd>
+            </div>
+            <div>
+              <dt>推薦場景</dt>
+              <dd id="detail-scene">城市午餐</dd>
+            </div>
+          </dl>
+          <div class="detail-actions">
+            <button class="dark-button" type="button" data-add-drive>加入試乘清單</button>
+            <a class="outline-button" href="#stores">查看活動門市</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-perks" aria-label="活動亮點">
+        <button type="button" data-perk="期間限定">
+          <span class="line-icon">◎</span>
+          <strong>期間限定</strong>
+          <span>限量販售中</span>
+        </button>
+        <button type="button" data-perk="聯名周邊">
+          <span class="line-icon">✺</span>
+          <strong>聯名周邊</strong>
+          <span>獨家設計商品</span>
+        </button>
+        <button type="button" data-perk="集點活動">
+          <span class="line-icon">✤</span>
+          <strong>集點活動</strong>
+          <span>集點換好禮</span>
+        </button>
+        <button type="button" data-perk="試乘體驗">
+          <span class="line-icon">▣</span>
+          <strong>試乘體驗</strong>
+          <span>BMW 試乘享優惠</span>
+        </button>
+      </section>
+
+      <section class="content-band" id="intro" aria-labelledby="intro-title">
+        <div class="section-copy">
+          <p class="section-label">Collaboration</p>
+          <h2 id="intro-title">把餐桌上的期待，開上迴轉車道</h2>
+          <p>
+            這次聯名把壽司郎的迴轉壽司語彙，轉化成 BMW 車款的趣味設定。每款壽司車都有自己的口味、車格與活動任務，從餐點、周邊到試乘體驗都能一路點下去。
+          </p>
+        </div>
+        <div class="intro-actions">
+          <button type="button" data-open-modal="booking">預約用餐</button>
+          <a href="#rules">活動辦法</a>
+        </div>
+      </section>
+
+      <section class="product-section" id="products" aria-labelledby="products-title">
+        <div class="section-heading">
+          <p class="section-label">Limited Goods</p>
+          <h2 id="products-title">限量周邊</h2>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <span>01</span>
+            <h3>壽司車迷你模型</h3>
+            <p>四款車色可收集，單筆消費滿額即可加購。</p>
+            <button type="button" data-product="壽司車迷你模型">加入收藏</button>
+          </article>
+          <article class="product-card">
+            <span>02</span>
+            <h3>聯名車票貼紙組</h3>
+            <p>以迴轉盤、車標與壽司紋樣設計，適合貼在筆電或行李箱。</p>
+            <button type="button" data-product="聯名車票貼紙組">加入收藏</button>
+          </article>
+          <article class="product-card">
+            <span>03</span>
+            <h3>方向盤造型餐墊</h3>
+            <p>防水材質搭配黑紅金配色，把餐桌變成發車區。</p>
+            <button type="button" data-product="方向盤造型餐墊">加入收藏</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="rules-section" id="rules" aria-labelledby="rules-title">
+        <div class="section-heading">
+          <p class="section-label">Event</p>
+          <h2 id="rules-title">活動辦法</h2>
+        </div>
+        <div class="rule-tabs" role="tablist" aria-label="活動辦法分頁">
+          <button class="is-active" type="button" role="tab" aria-selected="true" data-rule-tab="period">活動期間</button>
+          <button type="button" role="tab" aria-selected="false" data-rule-tab="points">集點兌換</button>
+          <button type="button" role="tab" aria-selected="false" data-rule-tab="drive">試乘優惠</button>
+        </div>
+        <div class="rule-panel" id="rule-panel">
+          <h3>2026.05.07 - 2026.06.30</h3>
+          <p>活動期間內於指定門市消費聯名餐點，即可參與壽司車集點任務。數量有限，贈完為止。</p>
+        </div>
+      </section>
+
+      <section class="stores-section" id="stores" aria-labelledby="stores-title">
+        <div class="section-heading">
+          <p class="section-label">Stores</p>
+          <h2 id="stores-title">門市資訊</h2>
+        </div>
+        <div class="city-filter" aria-label="選擇城市">
+          <button class="is-active" type="button" data-city="taipei">台北</button>
+          <button type="button" data-city="taichung">台中</button>
+          <button type="button" data-city="kaohsiung">高雄</button>
+        </div>
+        <div class="store-list" id="store-list"></div>
+      </section>
+
+      <section class="gift-banner" aria-label="來店消費滿額贈">
+        <div>
+          <p class="section-label">Gift</p>
+          <h2>來店消費滿額贈</h2>
+          <p>壽司車造型磁吸盤乙個，指定門市單筆消費滿額即可兌換。</p>
+          <button type="button" data-open-modal="gift">了解更多</button>
+        </div>
+        <img src="assets/gift-car.jpg" alt="鮭魚壽司車造型磁吸盤" />
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>壽司郎 × BMW 聯名概念頁</p>
+      <button type="button" data-open-modal="booking">立即訂位</button>
+    </footer>
+
+    <dialog class="modal" id="booking-modal" aria-labelledby="booking-title">
+      <form method="dialog" class="modal-card" data-booking-form>
+        <button class="modal-close" type="button" aria-label="關閉" data-close-modal>×</button>
+        <p class="section-label">Reservation</p>
+        <h2 id="booking-title">立即訂位</h2>
+        <label>
+          姓名
+          <input name="name" autocomplete="name" required />
+        </label>
+        <label>
+          人數
+          <select name="party" required>
+            <option value="2">2 位</option>
+            <option value="3">3 位</option>
+            <option value="4">4 位</option>
+            <option value="5">5 位以上</option>
+          </select>
+        </label>
+        <label>
+          日期
+          <input name="date" type="date" required />
+        </label>
+        <label>
+          門市
+          <select name="store" required>
+            <option>台北信義聯名店</option>
+            <option>台中旗艦聯名店</option>
+            <option>高雄夢時代聯名店</option>
+          </select>
+        </label>
+        <button class="dark-button full" type="submit">送出訂位</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="gallery-modal" aria-labelledby="gallery-title">
+      <div class="modal-card gallery-card">
+        <button class="modal-close" type="button" aria-label="關閉" data-close-modal>×</button>
+        <p class="section-label">Original Visual</p>
+        <h2 id="gallery-title">原始視覺</h2>
+        <img src="assets/sushi-bmw-reference.jpg" alt="壽司郎 BMW 聯名原始設計圖" />
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="gift-modal" aria-labelledby="gift-title">
+      <div class="modal-card">
+        <button class="modal-close" type="button" aria-label="關閉" data-close-modal>×</button>
+        <p class="section-label">Gift</p>
+        <h2 id="gift-title">滿額贈兌換方式</h2>
+        <p>活動期間於指定門市單筆消費滿 NT$888，即可兌換壽司車造型磁吸盤乙個。每筆消費限兌換一次，款式隨機。</p>
+        <button class="dark-button full" type="button" data-close-modal>知道了</button>
+      </div>
+    </dialog>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+  </body>
+</html>
