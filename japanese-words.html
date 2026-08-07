@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>每日日文單字｜初級 20 字</title>
+    <link rel="stylesheet" href="japanese-words.css" />
+    <script src="japanese-words-data.js" defer></script>
+    <script src="japanese-words.js" defer></script>
+  </head>
+  <body>
+    <header class="jp-header">
+      <p class="jp-eyebrow">初期程度・N5</p>
+      <h1>每日日文單字</h1>
+      <p class="jp-date" id="today-date"></p>
+      <p class="jp-sub">每天早上 9:00，帶你認識 20 個不同的日文初級單字，附英文拼音、中文解釋與例句。</p>
+    </header>
+
+    <section class="notify-panel" aria-label="通知提醒設定">
+      <div class="notify-copy">
+        <p id="notify-status">尚未開啟提醒。</p>
+        <p class="notify-hint">
+          提醒功能使用瀏覽器內建通知，僅在此分頁保持開啟時才會於每天 9:00 觸發；若想每天穩定收到提醒，建議將此頁面加入書籤並固定開啟。
+        </p>
+      </div>
+      <div class="notify-actions">
+        <button type="button" id="notify-toggle">開啟每日提醒</button>
+        <button type="button" id="notify-test" class="ghost">立即測試通知</button>
+      </div>
+    </section>
+
+    <main>
+      <section class="word-grid" id="word-grid" aria-label="今日單字列表"></section>
+    </main>
+
+    <footer class="jp-footer">
+      <p>單字每 5 天循環一輪，共收錄 100 個 N5 初級常用單字。</p>
+    </footer>
+  </body>
+</html>
