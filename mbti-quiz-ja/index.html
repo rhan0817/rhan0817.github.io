@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MBTI 恋愛ガイド｜女の子同士の恋 × 16タイプ</title>
+<meta name="description" content="自分のMBTIを選ぶだけで、そのタイプのあなたが恋をするとどうなるのかがわかる——女の子同士の恋 × MBTI 恋愛ガイド。">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233c6e63'/%3E%3Cpath d='M16 7l2.6 6.4L25 16l-6.4 2.6L16 25l-2.6-6.4L7 16l6.4-2.6z' fill='%23f5f3ee'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="MBTI 恋愛ガイド｜女の子同士の恋 × 16タイプ">
+<meta property="og:description" content="自分のMBTIを選ぶだけで、そのタイプのあなたが恋をするとどうなるのかがわかる。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MBTI 恋愛ガイド｜女の子同士の恋 × 16タイプ">
+<meta name="twitter:description" content="自分のMBTIを選ぶだけで、そのタイプのあなたが恋をするとどうなるのかがわかる。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap">
+<style>
+:root{
+  --bg:        #f5f3ee;
+  --surface:   #ffffff;
+  --surface-2: #eae6dd;
+  --ink:       #211f1c;
+  --ink-soft:  #6b665d;
+  --line:      rgba(33,31,28,0.12);
+  --accent:    #3c6e63;
+  --accent-2:  #a98f4b;
+  --accent-soft: rgba(60,110,99,0.12);
+  --glass: rgba(255,255,255,0.6);
+
+  --display: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  --body: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:        #17181a;
+    --surface:   #212224;
+    --surface-2: #2a2b2d;
+    --ink:       #ece9e2;
+    --ink-soft:  #a7a39a;
+    --line:      rgba(236,233,226,0.12);
+    --accent:    #6fb3a3;
+    --accent-2:  #d1b872;
+    --accent-soft: rgba(111,179,163,0.16);
+    --glass: var(--surface);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:        #17181a;
+  --surface:   #212224;
+  --surface-2: #2a2b2d;
+  --ink:       #ece9e2;
+  --ink-soft:  #a7a39a;
+  --line:      rgba(236,233,226,0.12);
+  --accent:    #6fb3a3;
+  --accent-2:  #d1b872;
+  --accent-soft: rgba(111,179,163,0.16);
+  --glass: var(--surface);
+}
+
+*{box-sizing:border-box;}
+[hidden]{display:none !important;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--body);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.corner-hex{
+  position:fixed; top:-60px; right:-60px;
+  width:260px; height:260px;
+  opacity:0.5; z-index:0; pointer-events:none;
+  color:var(--line);
+}
+@media (prefers-reduced-motion:no-preference){
+  .stage{ animation: rise .4s ease both; }
+  @keyframes rise{ from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);} }
+}
+
+.wrap{
+  position:relative; z-index:1;
+  max-width:560px; margin:0 auto;
+  padding-top: 28px;
+  padding-bottom: 40px;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+  min-height:100svh;
+  display:flex; flex-direction:column;
+  gap:20px;
+}
+
+.hub-link{
+  display:inline-flex; align-items:center; gap:4px;
+  font-size:13.5px; font-weight:700;
+  color:var(--ink-soft); text-decoration:none;
+  align-self:flex-start;
+}
+.hub-link:hover{ color:var(--accent); }
+
+.eyebrow{
+  font-family:var(--body); font-weight:700; font-size:14.5px;
+  letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--accent);
+  margin:0 0 10px;
+}
+
+#start{
+  margin:auto 0; text-align:center;
+  position:relative; overflow:hidden;
+  padding:40px 28px 32px;
+  border-radius:28px;
+  color:var(--ink);
+  background:var(--glass);
+  border:1px solid var(--line);
+  box-shadow:0 30px 70px -36px rgba(33,31,28,0.18);
+}
+#start > *{ position:relative; z-index:1; }
+#start .eyebrow{ color:var(--accent); }
+#start h1{
+  font-family:var(--display); font-weight:900;
+  font-size:clamp(28px, 7vw, 38px);
+  line-height:1.3; margin:12px 0 14px;
+  text-wrap:balance; color:var(--ink);
+}
+#start p.lede{
+  font-size:16px; line-height:1.7; color:var(--ink-soft);
+  margin:0 auto 26px; max-width:42ch;
+}
+.mbti-grid{
+  display:grid; grid-template-columns:repeat(4, 1fr);
+  gap:10px; margin-bottom:10px;
+}
+.mbti-btn{
+  font-family:var(--body); font-weight:800; font-size:16.5px;
+  letter-spacing:0.02em;
+  color:var(--ink); background:var(--surface-2);
+  border:1px solid var(--line); border-radius:14px;
+  padding:14px 4px; cursor:pointer;
+}
+.mbti-btn:active{ transform:scale(0.96); background:var(--accent-soft); color:var(--accent); }
+#start .meta{
+  margin-top:14px; font-size:14px; color:var(--ink-soft);
+}
+.alt-link{
+  display:inline-block; margin-top:18px;
+  font-family:var(--body); font-weight:700; font-size:14.5px;
+  color:var(--ink-soft); text-decoration:none;
+  background:none; border:none; cursor:pointer;
+  padding:0;
+}
+.alt-link:hover{ color:var(--accent); }
+
+.btn-primary{
+  font-family:var(--body); font-weight:700; font-size:18.5px;
+  border:none; border-radius:16px;
+  padding:16px 36px; cursor:pointer;
+  margin-top:4px;
+}
+#start .btn-primary{ color:#fff; background:var(--ink); }
+:root[data-theme="dark"] #start .btn-primary{ color:var(--bg); }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) #start .btn-primary{ color:var(--bg); }
+}
+.btn-primary:active{ transform:scale(0.98); }
+
+#picker{
+  margin:auto 0; text-align:center;
+  position:relative; overflow:hidden;
+  padding:40px 28px 32px;
+  border-radius:28px;
+  color:var(--ink);
+  background:var(--glass);
+  border:1px solid var(--line);
+  box-shadow:0 30px 70px -36px rgba(33,31,28,0.18);
+}
+#picker > *{ position:relative; z-index:1; }
+#picker .eyebrow{ color:var(--accent); }
+#picker h1{
+  font-family:var(--display); font-weight:900;
+  font-size:clamp(24px, 6vw, 30px);
+  line-height:1.3; margin:12px 0 22px;
+  text-wrap:balance; color:var(--ink);
+}
+
+#quiz{
+  flex:1; display:flex; flex-direction:column;
+  position:relative; overflow:hidden;
+  padding:22px 24px 26px;
+  border-radius:28px;
+  color:var(--ink);
+  background:var(--glass);
+  border:1px solid var(--line);
+  box-shadow:0 26px 60px -32px rgba(33,31,28,0.16);
+}
+.rail{
+  display:flex; align-items:center; gap:14px;
+  margin-bottom:22px;
+}
+.back-btn{
+  flex:none; width:38px; height:38px; border-radius:11px;
+  border:1px solid var(--line); background:var(--surface-2);
+  color:var(--ink); cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+}
+.back-btn svg{ width:18px; height:18px; }
+.back-btn:active{ transform:scale(0.95); }
+.rail-track{
+  flex:1; height:6px; border-radius:4px;
+  background:var(--line); overflow:hidden;
+}
+.rail-fill{
+  height:100%; border-radius:4px;
+  background:var(--accent);
+  transition:width .35s ease;
+}
+.rail-count{
+  font-variant-numeric:tabular-nums;
+  font-size:14.5px; font-weight:700; color:var(--ink-soft);
+  white-space:nowrap;
+}
+.q-title{
+  font-family:var(--display); font-weight:700;
+  font-size:clamp(21px,5.2vw,26px); line-height:1.45;
+  margin:0 0 18px; color:var(--ink);
+  text-wrap:balance;
+}
+.options{ display:flex; flex-direction:column; gap:10px; }
+.option{
+  text-align:left;
+  font-family:var(--body); font-size:16px; line-height:1.5; color:var(--ink);
+  background:var(--surface-2);
+  border:1px solid var(--line); border-radius:14px;
+  padding:16px 18px; cursor:pointer;
+  box-shadow:0 10px 24px -20px rgba(33,31,28,0.3);
+  transition:border-color .15s ease, background .15s ease, transform .1s ease;
+}
+.option:active{ transform:scale(0.99); }
+
+.hero-icon-circle{
+  width:76px; height:76px; border-radius:50%;
+  background:var(--accent-soft); color:var(--accent);
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 16px;
+  font-family:var(--display); font-weight:900; font-size:19px;
+  letter-spacing:0.02em;
+}
+#result{ text-align:center; }
+.hero-icon-circle.cycling{
+  animation: pulse-circle .5s ease-in-out infinite;
+  background:var(--accent-soft); color:var(--accent);
+}
+@keyframes pulse-circle{
+  0%, 100%{ transform:scale(1); }
+  50%{ transform:scale(1.06); }
+}
+.reveal-body{
+  opacity:0; transform:translateY(10px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+.reveal-body.show{ opacity:1; transform:translateY(0); }
+@media (prefers-reduced-motion:reduce){
+  .hero-icon-circle.cycling{ animation:none; }
+  .reveal-body{ transition:none; }
+}
+#result .type-code{
+  font-family:var(--body); font-weight:700; font-size:13.5px;
+  letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-soft);
+  margin:0 0 6px;
+}
+#result h1{
+  font-family:var(--display); font-weight:900;
+  font-size:clamp(26px,7vw,34px); line-height:1.25;
+  margin:0 0 10px; text-wrap:balance;
+}
+#result .tagline{
+  font-size:16.5px; color:var(--accent); font-weight:700;
+  margin:0 0 18px;
+}
+#result .desc{
+  margin:0 auto 14px; max-width:48ch; text-align:left;
+  background:var(--surface-2); border:1px solid var(--line);
+  border-radius:18px; padding:6px 20px;
+}
+.stage-row{ padding:16px 0; }
+.stage-row + .stage-row{ border-top:1px solid var(--line); }
+.stage-label{
+  display:inline-flex; align-items:center;
+  font-family:var(--body); font-weight:700; font-size:13px;
+  letter-spacing:0.06em;
+  color:var(--accent); margin:0 0 6px;
+}
+.stage-text{
+  font-size:15.5px; line-height:1.7; color:var(--ink-soft); margin:0;
+}
+.result-actions{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:16px; }
+.btn-ghost{
+  font-family:var(--body); font-weight:700; font-size:16px;
+  color:var(--ink); background:transparent;
+  border:1.5px solid var(--line); border-radius:14px;
+  padding:13px 22px; cursor:pointer;
+}
+.btn-ghost:active{ transform:scale(0.98); }
+.copied{ font-size:14.5px; color:var(--ink-soft); margin-top:10px; height:16px; text-align:center; }
+
+footer{
+  text-align:center; font-size:14px; color:var(--ink-soft);
+  margin-top:12px;
+}
+.sponsor-link{
+  display:inline-flex; align-items:center; gap:6px;
+  margin-top:14px; font-size:14px; font-weight:600;
+  color:var(--accent); text-decoration:none;
+}
+.sponsor-link:hover{ text-decoration:underline; }
+.q-title, .stage-text, #start p.lede{ line-break:strict; word-break:normal; overflow-wrap:anywhere; }
+</style>
+</head>
+<body>
+
+<svg class="corner-hex" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+  <polygon points="100,10 182,55 182,145 100,190 18,145 18,55" stroke="currentColor" stroke-width="1.5"/>
+</svg>
+
+<div class="wrap">
+
+  <a class="hub-link" href="/">← トップへ</a>
+
+  <section id="start" class="stage">
+    <div class="eyebrow">女の子同士の恋 × MBTI</div>
+    <h1>恋するあなたは、<br>どのMBTI？</h1>
+    <p class="lede">恋愛シチュエーション12問で、恋をしているときのあなたに一番近いタイプがわかります。</p>
+    <button class="btn-primary" id="start-btn" type="button">診断をはじめる</button>
+    <div class="meta">所要時間 約2分 · 直感で答えてね</div>
+    <button class="alt-link" id="to-picker" type="button">自分のMBTIを知っている？結果を直接見る →</button>
+  </section>
+
+  <section id="picker" class="stage" hidden>
+    <div class="eyebrow">女の子同士の恋 × MBTI</div>
+    <h1>あなたのタイプを選んでね</h1>
+    <div class="mbti-grid" id="mbti-grid"></div>
+    <button class="alt-link" id="to-start" type="button">← 診断に戻る</button>
+  </section>
+
+  <section id="quiz" class="stage" hidden>
+    <div class="rail">
+      <button class="back-btn" id="q-back-btn" type="button" aria-label="前の質問">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="rail-track"><div class="rail-fill" id="rail-fill"></div></div>
+      <div class="rail-count" id="rail-count">1 / 12</div>
+    </div>
+    <h2 class="q-title" id="q-title"></h2>
+    <div class="options" id="q-options"></div>
+  </section>
+
+  <section id="result" class="stage" hidden>
+    <span class="hero-icon-circle" id="r-code"></span>
+    <div class="reveal-body" id="reveal-body">
+      <div class="type-code" id="r-code-label"></div>
+      <h1 id="r-name"></h1>
+      <p class="tagline" id="r-tagline"></p>
+      <div class="desc" id="r-desc"></div>
+      <div class="result-actions">
+        <button class="btn-ghost" id="back-btn" type="button">もう一度診断する</button>
+        <button class="btn-ghost" id="copy-btn" type="button">URLをコピーしてシェア</button>
+      </div>
+      <div class="copied" id="copy-msg"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>直感で選んでね。結果はあくまでお遊びです、本気にしたら負け！</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+
+/* ---------------- data ---------------- */
+var ORDER = ["ISTJ","ISFJ","INFJ","INTJ","ISTP","ISFP","INFP","INTP","ESTP","ESFP","ENFP","ENTP","ESTJ","ESFJ","ENFJ","ENTJ"];
+var TYPES = {
+  ISTJ:{ name:"頼れる巣づくり屋", tagline:"甘い言葉は言わないけど、言ったことは必ず守る", stages:[
+    {label:"両片思い期", text:"積極的にアピールはしないけど、相手の習慣をそっと覚えて、行動で少しずつ「本気かどうか」を確かめていく。"},
+    {label:"デート中", text:"サプライズより計画どおりが好き。時間を守って、言ったことはやる。だから相手は「この人なら安心」と思える。"},
+    {label:"安定期", text:"一度決めたらめったに揺らがない。相手を「一緒に人生を設計する人」として大切にし、あとから気持ちを翻すことはほとんどない。"} ] },
+  ISFJ:{ name:"気くばりの守り人", tagline:"相手の小さなクセは全部覚えてるのに、自分のつらさはなかなか言えない", stages:[
+    {label:"両片思い期", text:"こっそり相手の好みを観察して、細かいことまでたくさん覚えている。でも勘違いだったら怖くて、自分からは告白しにくい。"},
+    {label:"デート中", text:"相手の気持ちやニーズに寄り添うのが上手。お水を渡すタイミングも、黙ってそばにいるべき時も、ぴたりとわかる。"},
+    {label:"安定期", text:"相手のためなら喜んで尽くすけど、自分が我慢したことは飲み込みがち。気づけば心にダメージがたまっていることも。"} ] },
+  INFJ:{ name:"見抜く癒し系", tagline:"あなたの心の中はすぐ見抜くのに、自分の心はなかなか見せない", stages:[
+    {label:"両片思い期", text:"相手がまだ口にしていない気持ちはすぐに見抜けるのに、自分がときめいているかどうかは奥深くにしまってしまう。"},
+    {label:"デート中", text:"相手の気持ちを大切にするのが得意で、一緒にいてとても心地いい。でも本音を話すのは、だいぶ打ち解けてから。"},
+    {label:"安定期", text:"しっかり信頼できてはじめて弱い部分を見せられる。一度心を開いたら、とても深い愛情で向き合う。"} ] },
+  INTJ:{ name:"長期プランナー", tagline:"簡単には本気にならない、なったら迷わない", stages:[
+    {label:"両片思い期", text:"一時のときめきで突っ走ったりはしない。まずは心の中で、この人に本気になる価値があるかをじっくり見極める。"},
+    {label:"デート中", text:"この関係がこの先どうなるかを真剣に考える。曖昧なままは苦手で、お互い本気かどうかをはっきりさせたい。"},
+    {label:"安定期", text:"付き合うと決めたら、戦略的に関係を育てていく。言ったことは実行する、ぶれない人。"} ] },
+  ISTP:{ name:"自由な観察者", tagline:"あなたへの愛し方は、たくさん話すことじゃなく一緒に何かをすること", stages:[
+    {label:"両片思い期", text:"甘い言葉はあまり言わない。それより「一緒に何かをしてみる」ことで、お互いの相性を確かめるタイプ。"},
+    {label:"デート中", text:"現実的な過ごし方が好き。座って気持ちを語り合うより、一緒に問題を解決したり、手を動かして何かを作るほうがいい。"},
+    {label:"安定期", text:"自分の時間と空間が必要で、どこにいるのかしつこく聞かれるのは苦手。でもそばにいてくれると、すごく安心感がある。"} ] },
+  ISFP:{ name:"やさしいアーティスト", tagline:"小さなサプライズで愛を伝え、沈黙で傷ついたことを伝える", stages:[
+    {label:"両片思い期", text:"その瞬間の雰囲気をとても大事にする。ちょっとしたプレゼントやサプライズで、さりげなく好意を伝える。"},
+    {label:"デート中", text:"ムードのある過ごし方が好き。言葉で直接言うより、行動で気持ちを証明したい。"},
+    {label:"安定期", text:"ぶつかりそうになると、黙ってそっと身を引きがち。傷ついた気持ちを言葉にするのはちょっと苦手。"} ] },
+  INFP:{ name:"理想主義の恋人", tagline:"魂の共鳴を求めて、そのギャップに傷つきやすい", stages:[
+    {label:"両片思い期", text:"この関係についてもう想像がふくらんでいて、ひと目で本当にわかってもらえることを望んでいる。のめり込みやすい。"},
+    {label:"デート中", text:"ロマンチックになるととても真っすぐ。ふたりの心が通じ合っている感覚を、心から楽しむ。"},
+    {label:"安定期", text:"現実と理想にズレがあると、ひとりでぐるぐる考え込みがち。誰かに引っぱり出して、ちゃんと話してもらう必要がある。"} ] },
+  INTP:{ name:"理性の探求者", tagline:"あなたと人生について議論するのが好き、不器用に愛する", stages:[
+    {label:"両片思い期", text:"相手と深く語り合って、お互いの考えを分析するのが好き。話が合うことこそ、恋のいちばんの始まりだと思っている。"},
+    {label:"デート中", text:"一緒にいるのはまるで考えを交換しているよう。それが親密さだと思っているけど、甘い言葉はあまり言えない。"},
+    {label:"安定期", text:"気持ちの表現が不器用で、「大切にされてる感じがしない」と言われがち。本当は、どう言えばいいかわからないだけ。"} ] },
+  ESTP:{ name:"情熱の冒険家", tagline:"好きになったら、ストレートで大胆に攻める", stages:[
+    {label:"両片思い期", text:"ときめいたらすぐ行動。ぐずぐずするのは嫌いで、両片思いの期間はたいてい短い。"},
+    {label:"デート中", text:"新鮮さとスリルが好き。デートはいつも予想外の展開で、相手を飽きさせない。"},
+    {label:"安定期", text:"変わりばえのない毎日にはすぐ飽きてしまう。熱をキープするには、こまめに新鮮さを作り出すことが必要。"} ] },
+  ESFP:{ name:"情熱のパフォーマー", tagline:"楽しいときは周りまで明るくするけど、落ち込むとどうしていいかわからない", stages:[
+    {label:"両片思い期", text:"日常のちょっとしたことを自分からどんどんシェアする。楽しそうなあなたは周りまで明るくして、相手をときめかせやすい。"},
+    {label:"デート中", text:"恋をしているあなたはとても生き生き。うれしいことを思いきり大きく楽しんで、一緒にいると元気がもらえる。"},
+    {label:"安定期", text:"落ち込んだときやケンカのときは、どう向き合えばいいかわからなくなりがち。まずは逃げて頭を冷やしたくなる。"} ] },
+  ENFP:{ name:"恋に全力な追跡者", tagline:"ときめくと一直線、でも冷めるのも早い", stages:[
+    {label:"両片思い期", text:"好きになると一直線。すぐに相手に「好かれてる」と気づかせて、空気が一気に熱くなる。"},
+    {label:"デート中", text:"サプライズやロマンチックな雰囲気づくりが好き。相手に「全力で愛されてる」と感じさせる。"},
+    {label:"安定期", text:"熱くなるのが早いぶん、冷めるのも同じくらい早くないか要注意。じっくり関係を育てることを意識してみて。"} ] },
+  ENTP:{ name:"からかい上手な論客", tagline:"口ゲンカで恋の駆け引き、約束するには時間が必要", stages:[
+    {label:"両片思い期", text:"議論や冗談をいちゃいちゃの手段にするのが好き。両片思いの時期は、言葉のキャッチボールがとにかく楽しい。"},
+    {label:"デート中", text:"アイデアが豊富で、デートはいつも新鮮。相手を退屈させることはない。"},
+    {label:"安定期", text:"関係に真剣にコミットするには、たいてい少し考える時間が必要。納得できてはじめてうなずける。"} ] },
+  ESTJ:{ name:"行動派のリーダー", tagline:"ケンカもすぐに解決したい、引きずるのは嫌い", stages:[
+    {label:"両片思い期", text:"好きになったらぐずぐずしない。気持ちはまっすぐ伝えて、駆け引きはあまりしない。"},
+    {label:"デート中", text:"デートは効率よく、計画的に組みたい。時間を守ること、言ったことをやることを大切にする。"},
+    {label:"安定期", text:"問題が起きたら、はっきり話し合いたいタイプ。冷戦するより、その場で解決してしまいたい。"} ] },
+  ESFJ:{ name:"あたたかな世話焼き", tagline:"記念日は全部覚えてる、そして見ていてほしい", stages:[
+    {label:"両片思い期", text:"雰囲気づくりが上手。会う理由を自分から作って、相手に「大事にされてる」と感じさせる。"},
+    {label:"デート中", text:"デートのプランも特別な日を覚えておくのもお手のもの。関係をすみずみまで丁寧にケアする。"},
+    {label:"安定期", text:"相手からの反応や「ありがとう」がとても必要。尽くし続けても気づいてもらえないと、ひどく落ち込んでしまう。"} ] },
+  ENFJ:{ name:"関係を育てる人", tagline:"空気を読むのは得意なのに、自分を大切にするのを忘れがち", stages:[
+    {label:"両片思い期", text:"空気を読むのがとても上手で、相手が何を求めているかをすぐにつかむ。相手は「わかってもらえてる」と感じられる。"},
+    {label:"デート中", text:"いつも相手の気持ちを優先して、一緒にいる時間の和やかな雰囲気を守ろうとがんばる。"},
+    {label:"安定期", text:"相手のお世話に夢中で、自分だって大切にされる必要があることを忘れてしまいがち。"} ] },
+  ENTJ:{ name:"決断力の指揮官", tagline:"自分の欲しいものがはっきりしていて、曖昧なのは嫌い", stages:[
+    {label:"両片思い期", text:"グレーゾーンは苦手。ゆっくり駆け引きするより、はっきり言葉にして関係を確定させたい。"},
+    {label:"デート中", text:"恋愛の方向性がはっきりしている。本気になると決めたら、自分からどんどん関係を進めていく。"},
+    {label:"安定期", text:"自分の欲しいものがよくわかっていて、ふたりの未来を自分から計画する。同じ場所で足踏みするのは嫌い。"} ] }
+};
+
+/* ---------------- picker grid ---------------- */
+var grid = document.getElementById("mbti-grid");
+ORDER.forEach(function(code){
+  var btn = document.createElement("button");
+  btn.className = "mbti-btn";
+  btn.type = "button";
+  btn.textContent = code;
+  btn.addEventListener("click", function(){ revealResult(code); });
+  grid.appendChild(btn);
+});
+
+/* ---------------- questions: 12 total, 3 per axis ---------------- */
+var QUESTIONS = [
+  { q:"好きな人とのデートが終わったら、あなたは：", opts:[
+      {label:"すぐ親友にメッセージして、さっきの出来事を全部シェアする", pole:"E"},
+      {label:"ひとりで余韻にひたって、急いで誰かに話したりはしない", pole:"I"} ] },
+  { q:"集まりが何件も続いたあと、一番したいことは：", opts:[
+      {label:"もう一軒行く！人が多いほど元気が出る", pole:"E"},
+      {label:"家に帰って、ひとり静かに充電する", pole:"I"} ] },
+  { q:"誰かを好きになったら、あなたは：", opts:[
+      {label:"自分から話題やきっかけをたくさん作って、相手と関わる", pole:"E"},
+      {label:"そばでそっと観察して、相手が近づいてくるのを待つ", pole:"I"} ] },
+  { q:"デート中、目に入りやすいのは：", opts:[
+      {label:"相手の今日の服、頼んだメニュー、話し方の細かいところ", pole:"S"},
+      {label:"話していて全体的にどう感じるか、ふたりの波長が合うか", pole:"N"} ] },
+  { q:"将来の話をするとき、話したいのは：", opts:[
+      {label:"いつ何をするか、という具体的な計画", pole:"S"},
+      {label:"いろいろな可能性の話。決めつけなくていい", pole:"N"} ] },
+  { q:"相手からメッセージが届いたら、あなたは：", opts:[
+      {label:"書いてあるとおりに受け取る。言われたことがすべて", pole:"S"},
+      {label:"行間に別の意味がないか、つい考えてしまう", pole:"N"} ] },
+  { q:"ケンカになったとき、あなたは：", opts:[
+      {label:"まず筋道を立てて、何が問題なのかはっきりさせたい", pole:"T"},
+      {label:"まず相手が今どんな気持ちかを気にかける", pole:"F"} ] },
+  { q:"友だちから恋愛相談をされたら、あなたは：", opts:[
+      {label:"メリット・デメリットを分析して、現実的なアドバイスをする", pole:"T"},
+      {label:"まずは気持ちを全部吐き出させてあげて、それからゆっくり話す", pole:"F"} ] },
+  { q:"恋愛に関わる決断をするとき、信じるのは：", opts:[
+      {label:"一度冷静になって考え抜いたロジック", pole:"T"},
+      {label:"その瞬間の、心のいちばん正直な気持ち", pole:"F"} ] },
+  { q:"デートの予定を立てるとき、いつもは：", opts:[
+      {label:"時間と場所を前もって決めて、計画どおりに動く", pole:"J"},
+      {label:"その時の気分次第。直前に決めてもぜんぜんOK", pole:"P"} ] },
+  { q:"恋の進み方は、どちらがいい？", opts:[
+      {label:"早めに関係をはっきりさせて、落ち着きたい", pole:"J"},
+      {label:"少し余白を残して、自然の流れにまかせたい", pole:"P"} ] },
+  { q:"予定が急に崩れたとき、あなたの反応は：", opts:[
+      {label:"ちょっとイライラ。早く元の予定に戻したい", pole:"J"},
+      {label:"平気。臨機応変に動くのは得意", pole:"P"} ] }
+];
+
+var current = 0;
+var answers = [];
+var shuffledOrders = [];
+
+function computeCode(){
+  var tally = { E:0, I:0, S:0, N:0, T:0, F:0, J:0, P:0 };
+  answers.forEach(function(pole){ if(pole) tally[pole]++; });
+  var code = "";
+  code += tally.E >= tally.I ? "E" : "I";
+  code += tally.S >= tally.N ? "S" : "N";
+  code += tally.T >= tally.F ? "T" : "F";
+  code += tally.J >= tally.P ? "J" : "P";
+  return code;
+}
+
+var railFill = document.getElementById("rail-fill");
+var railCount = document.getElementById("rail-count");
+var qTitle = document.getElementById("q-title");
+var qOptions = document.getElementById("q-options");
+var qBackBtn = document.getElementById("q-back-btn");
+
+qBackBtn.addEventListener("click", function(){
+  if(current > 0){
+    current--;
+    renderQuestion();
+  }
+});
+
+function renderQuestion(){
+  var total = QUESTIONS.length;
+  railFill.style.width = (current/total*100)+"%";
+  railCount.textContent = (current+1)+" / "+total;
+  qBackBtn.style.visibility = current===0 ? "hidden" : "visible";
+
+  var item = QUESTIONS[current];
+  qTitle.textContent = item.q;
+  qOptions.innerHTML = "";
+
+  var order = shuffledOrders[current];
+  if(!order){
+    order = Math.random() < 0.5 ? [0,1] : [1,0];
+    shuffledOrders[current] = order;
+  }
+
+  order.forEach(function(idx){
+    var opt = item.opts[idx];
+    var btn = document.createElement("button");
+    btn.className = "option";
+    btn.type = "button";
+    btn.textContent = opt.label;
+    btn.addEventListener("click", function(){
+      answers[current] = opt.pole;
+      if(current < QUESTIONS.length - 1){
+        current++;
+        renderQuestion();
+      } else {
+        revealResult(computeCode());
+      }
+    });
+    qOptions.appendChild(btn);
+  });
+}
+
+document.getElementById("start-btn").addEventListener("click", function(){
+  current = 0;
+  answers = [];
+  shuffledOrders = [];
+  document.getElementById("start").hidden = true;
+  document.getElementById("quiz").hidden = false;
+  window.scrollTo(0,0);
+  renderQuestion();
+});
+
+document.getElementById("to-picker").addEventListener("click", function(){
+  document.getElementById("start").hidden = true;
+  document.getElementById("picker").hidden = false;
+  window.scrollTo(0,0);
+});
+
+document.getElementById("to-start").addEventListener("click", function(){
+  document.getElementById("picker").hidden = true;
+  document.getElementById("start").hidden = false;
+  window.scrollTo(0,0);
+});
+
+function showResult(code){
+  var t = TYPES[code];
+  if(!t) return;
+  document.getElementById("r-code").textContent = code;
+  document.getElementById("r-code").classList.remove("cycling");
+  document.getElementById("r-code-label").textContent = code;
+  document.getElementById("r-name").textContent = t.name;
+  document.getElementById("r-tagline").textContent = t.tagline;
+  var descEl = document.getElementById("r-desc");
+  descEl.innerHTML = "";
+  t.stages.forEach(function(s){
+    var row = document.createElement("div");
+    row.className = "stage-row";
+    var label = document.createElement("div");
+    label.className = "stage-label";
+    label.textContent = s.label;
+    var text = document.createElement("div");
+    text.className = "stage-text";
+    text.textContent = s.text;
+    row.appendChild(label);
+    row.appendChild(text);
+    descEl.appendChild(row);
+  });
+  document.getElementById("reveal-body").classList.add("show");
+  document.getElementById("start").hidden = true;
+  document.getElementById("picker").hidden = true;
+  document.getElementById("quiz").hidden = true;
+  document.getElementById("result").hidden = false;
+  window.scrollTo(0,0);
+}
+
+/* ---------------- reveal with a short letter-cycling animation ---------------- */
+var AXIS_LETTERS = [["E","I"],["S","N"],["T","F"],["J","P"]];
+var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function revealResult(code){
+  var t = TYPES[code];
+  if(!t) return;
+
+  if(prefersReducedMotion){
+    showResult(code);
+    return;
+  }
+
+  document.getElementById("start").hidden = true;
+  document.getElementById("picker").hidden = true;
+  document.getElementById("quiz").hidden = true;
+  document.getElementById("result").hidden = false;
+  window.scrollTo(0,0);
+
+  var circle = document.getElementById("r-code");
+  var revealBody = document.getElementById("reveal-body");
+  revealBody.classList.remove("show");
+  circle.classList.add("cycling");
+
+  var finalLetters = code.split("");
+  var letters = finalLetters.map(function(){ return ""; });
+  var settled = [false, false, false, false];
+
+  var cycleTimer = setInterval(function(){
+    for(var i=0;i<4;i++){
+      if(!settled[i]){
+        var pair = AXIS_LETTERS[i];
+        letters[i] = pair[Math.random() < 0.5 ? 0 : 1];
+      }
+    }
+    circle.textContent = letters.join("");
+  }, 55);
+
+  [220, 440, 660, 880].forEach(function(delay, i){
+    setTimeout(function(){
+      settled[i] = true;
+      letters[i] = finalLetters[i];
+      circle.textContent = letters.join("");
+    }, delay);
+  });
+
+  setTimeout(function(){
+    clearInterval(cycleTimer);
+    showResult(code);
+  }, 1050);
+}
+
+document.getElementById("back-btn").addEventListener("click", function(){
+  document.getElementById("result").hidden = true;
+  document.getElementById("quiz").hidden = true;
+  document.getElementById("picker").hidden = true;
+  document.getElementById("start").hidden = false;
+  document.getElementById("reveal-body").classList.remove("show");
+  if(location.search) history.replaceState(null, "", location.pathname);
+  window.scrollTo(0,0);
+});
+
+document.getElementById("copy-btn").addEventListener("click", function(){
+  var msg = document.getElementById("copy-msg");
+  var code = document.getElementById("r-code-label").textContent;
+  var url = location.origin + location.pathname + "?type=" + code;
+  navigator.clipboard.writeText(url).then(function(){
+    msg.textContent = "URLをコピーしました";
+    setTimeout(function(){ msg.textContent = ""; }, 2000);
+  }).catch(function(){
+    msg.textContent = "コピーできませんでした。URLを手動でコピーしてください";
+  });
+});
+
+/* ---------------- open directly from a shared link (?type=ISTP) ---------------- */
+var params = new URLSearchParams(location.search);
+var sharedType = (params.get("type") || "").toUpperCase();
+if(sharedType && TYPES[sharedType]){
+  showResult(sharedType);
+}
+
+})();
+</script>
+
+</body>
+</html>
